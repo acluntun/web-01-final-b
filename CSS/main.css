@@ -1,0 +1,326 @@
+@font-face {
+    font-family: "Gotham-Bold";
+    src: url('../fonts/Gotham-Bold.otf') format('otf'), url('../fonts/Gotham-Bold.eot') format('eot'), url('../fonts/Gotham-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Gotham-Medium";
+    src: url('../fonts/Gotham-Medium.otf') format('otf'), url('../fonts/Gotham-Medium.eot') format('eot'), url('../fonts/Gotham-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Avenir";
+    src: url('../fonts/Avenir.otf') format('otf'), url('../fonts/avenir-next-regular.eot') format('eot'), url('../fonts/avenir-next-regular.woff') format('woff');
+}
+
+body {
+    padding: 0;
+}
+
+/* START NAV */
+
+.nav-main {
+    height: 56vh;
+}
+
+nav {
+    background: url(https://images.unsplash.com/photo-1501876991173-f9c47cd28268?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=11822fe6ab2de36ee07cd74486dbdaf4&auto=format&fit=crop&w=3406&q=80);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 55vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 120px 130px 1fr;
+    grid-gap: 2vw;
+}
+
+#logo, .nav-elem {
+    font-family: "Gotham-Bold";
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    background-color: #F7CE3E;
+    text-align: center;
+    line-height: 0;
+    margin: 10px 20px;
+    font-size: 2em;
+}
+
+#nav-main {
+    grid-column: 3/4;
+}
+
+.nav-sec {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) 0.25fr;
+    grid-gap: 1vw;
+    margin-top: 10px;
+}
+
+.nav-elem {
+    background-color: #1A2930;
+    width: 100%;
+    color: white;
+    text-align: center;
+    line-height: 0;
+    border-radius: 2px;
+}
+
+#this-page {
+    background-color: #F7CE3E;
+}
+
+#nav-search {
+    width: 40px;
+    display: grid;
+    margin-right: 1vw;
+}
+
+a {
+    text-decoration: none;
+}
+
+#nav-head {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 5em;
+    font-family: "Gotham-Medium";
+    line-height: 0;
+}
+
+.nav-head-p {
+    width: 70%;
+    margin: 0 auto;
+    font-family: "Avenir";
+    font-size: 1.5rem;
+}
+
+#nav-search div {
+    justify-self: start;
+    align-self: center;
+    margin-left: 0.65vw;
+}
+
+/* START MAGNIFYNG GLASS */
+
+/* SOURCE: https://codepen.io/internetross/pen/GvBtw */
+
+@import "compass/css3";
+.ico-mglass {
+    position: relative;
+    display: inline-block;
+    border-radius: 30px;
+    height: 10px;
+    width: 10px;
+    border: 2px solid white;
+}
+
+.ico-mglass:after {
+    content: "";
+    height: 2px;
+    width: 10px;
+    background: white;
+    position: absolute;
+    top: 11px;
+    left: 8px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+/* END MAGNIFYNG GLASS */
+
+/* END NAV */
+
+/* START MAIN */
+
+.main-sec {
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+}
+
+.main-sec img {
+    width: 100%;
+}
+
+.img-div {
+    position: relative;
+}
+
+.img-name {
+    position: absolute;
+    width: 33%;
+    top: 0;
+    font-family: "Gotham-Medium";
+    padding: 10px;
+}
+
+.img-name-type1 {
+    background-color: #C5C1C0;
+    left: 0;
+}
+
+.img-name-type2 {
+    background-color: #1A2930;
+    right: 0;
+    color: white;
+}
+
+.img-name-type3 {
+    background-color: #F7CE3E;
+    right: 0;
+}
+
+.img-name-type4 {
+    background-color: black;
+    right: 0;
+    color: #F7CE3E;
+}
+
+.img-name-type5 {
+    background-color: #1A2930;
+    left: 0;
+    color: white;
+}
+
+.img-name-type6 {
+    background-color: black;
+    left: 0;
+    color: #F7CE3E;
+}
+
+.img-name-type7 {
+    background-color: #C5C1C0;
+    right: 0;
+}
+
+.main-div-first {
+    background-color: #1A2930;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 100%;
+    display: grid;
+    color: white;
+}
+
+.main-div-first p, .main-div-second p {
+    font-size: 5vw;
+    align-self: center;
+    justify-self: center;
+    margin: 20px;
+    font-family: "Gotham-Medium";
+}
+
+.main-div-second {
+    background-color: #F7CE3E;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column: 3;
+    display: grid;
+    height: 100%;
+}
+
+/* END MAIN */
+
+/* START FOOTER */
+
+.footer-sec {
+    position: absolute;
+    left: 0;
+    background-color: #1A2930;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.footer-sec a {
+    color: white;
+    font-family: "Gotham-Medium";
+    margin: 20px;
+}
+
+/* END FOOTER */
+
+/* START TABLET */
+
+@media screen and (max-width: 1024px) {
+    nav {
+        grid-template-columns: 70px 25px 1fr;
+    }
+    #nav-search {
+        margin-right: 1vw;
+    }
+    #logo {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2em;
+    }
+    h1 {
+        font-size: 4em;
+    }
+    .nav-head-p {
+        width: 70%;
+        font-size: 1em;
+    }
+    .main-sec {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .main-div-first {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .main-div-second {
+        grid-row-start: 4;
+        grid-row-end: 6;
+        grid-column: 2;
+    }
+    .main-div-first p, .main-div-second p {
+        font-size: 4em;
+    }
+}
+
+/* END TABLET  */
+
+/* START MOBILE */
+
+@media screen and (max-width: 780px) {
+    .main-sec {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 5vw;
+    }
+    h1 {
+        font-size: 3.5em;
+        margin: 8vh;
+    }
+    .main-sec div {
+        margin: 1vh 0;
+    }
+    .main-div-first p, .main-div-second p {
+        align-self: start;
+        justify-self: start;
+        margin: 10px;
+    }
+}
+
+/* END MOBILE */
