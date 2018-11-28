@@ -110,7 +110,9 @@ h1 {
     align-self: center;
     margin-left: 0.65vw;
 }
-
+.students h1, .students p{
+    color: #F7CE3E;
+}
 /* START MAGNIFYNG GLASS */
 
 /* SOURCE: https://codepen.io/internetross/pen/GvBtw */
@@ -147,12 +149,23 @@ h1 {
 
 .main-sec {
     display: grid;
-    grid-gap: 1vw;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1vw; 
     align-items: center;
     justify-items: center;
     padding: 20px;
+}
+
+.three-cols {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.two-cols {
+    grid-template-columns: 1.7fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.two-rows {
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .main-sec img {
@@ -161,6 +174,12 @@ h1 {
 
 .img-div {
     position: relative;
+}
+
+.student-img img {
+    height: 30vh;
+    object-fit: none;
+    object-position: 100% 30%;
 }
 
 .img-name {
@@ -218,13 +237,31 @@ h1 {
     display: grid;
     color: white;
 }
-
+.line {
+    border-bottom: #F7CE3E solid 2vh;
+    width: 70%;
+    margin: 0 5vw;
+}
 .main-div-first p, .main-div-second p {
     font-size: 5vw;
     align-self: center;
     justify-self: center;
     margin: 20px;
     font-family: "Gotham-Medium";
+}
+
+.main-div-first-small p {
+    font-size: 4vw;
+    padding: 5vw;
+    margin: 0;
+}
+
+#main-div-first-mainp {
+    padding-bottom: 0;
+}
+
+#main-div-first-secp {
+    padding-top: 0;
 }
 
 .main-div-second {
@@ -234,6 +271,18 @@ h1 {
     grid-column: 3;
     display: grid;
     height: 100%;
+}
+
+h2 {
+    color: #1A2930;
+    font-size: 3vw;
+    font-family: "Gotham-Medium";
+    margin: 0;
+}
+
+.secondary-info {
+    font-size: 1vw;
+    font-family: "Gotham-Medium";
 }
 
 /* END MAIN */
@@ -281,9 +330,13 @@ h1 {
         width: 70%;
         font-size: 1em;
     }
-    .main-sec {
+    .three-cols {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, 1fr);
+    }
+
+    .two-rows {
+        grid-template-rows: repeat(3, 1fr);
     }
     .main-div-first {
         grid-row-start: 1;
@@ -296,6 +349,9 @@ h1 {
     }
     .main-div-first p, .main-div-second p {
         font-size: 4em;
+    }
+    .student-img img {
+        object-position: 70% 30%;
     }
 }
 
@@ -320,6 +376,16 @@ h1 {
         align-self: start;
         justify-self: start;
         margin: 10px;
+    }
+
+    h2 {
+        font-size: 4vw;
+        margin: 0;
+    }
+    
+    .secondary-info {
+        font-size: 3vw;
+        font-family: "Gotham-Medium";
     }
 }
 
