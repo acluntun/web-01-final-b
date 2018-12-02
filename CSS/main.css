@@ -188,6 +188,17 @@ h1 {
     position: relative;
 }
 
+.img-div-test {
+    width: 100%;
+    height: 34.5vh;
+}
+
+.img-div-test img {
+    object-fit: cover;
+    object-position: center;
+    height: 34.5vh;
+}
+
 .student-img img {
     height: 30vh;
     object-fit: none;
@@ -402,6 +413,10 @@ h2 {
     .main-div-first-small {
         display: flex;
         flex-direction: column;
+    }
+    .footer-sec {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
     }
 }
 
